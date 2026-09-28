@@ -1,0 +1,24 @@
+# 自建推理服务（vLLM / SGLang 等)，走 OpenAI 兼容接口。
+#
+# 例如以 SGLang 起服务：
+#   python -m sglang.launch_server --model-path <ckpt> --port 30000
+# 然后：
+#   python -m recipe.fsm_agent.main \
+#     --agent_config configs/llm/local_server.example.yaml ...
+#
+# 本地服务通常不校验密钥，api_key 留空即可（客户端会填入占位值）。
+
+endpoint: http://127.0.0.1:30000/v1
+api_key: null
+model_name: your-model-name
+
+temperature: 1.0
+top_p: 1.0
+max_tokens: 32768
+
+top_k: null
+min_p: null
+presence_penalty: null
+repetition_penalty: null
+
+include_thoughts: true

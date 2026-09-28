@@ -1,0 +1,12 @@
+{
+    "search_api": {
+        "engine": "you",
+        "keys_to_keep": ["title", "url", "description", "position"],
+        "num": 10,
+        "max_attempts": 3
+    },
+    "seal_memory_tool": {
+        "max_seal_times": -1,
+        "min_seal_tokens": 20000
+    }
+}

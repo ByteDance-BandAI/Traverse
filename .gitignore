@@ -1,0 +1,50 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments
+.venv
+/.venvs/
+/.deps/
+
+# Local datasets
+/data/
+
+results
+sft_data_gen
+research_notes
+/analysis/*
+
+compute_run_metrics.py
+
+# Local launch scripts, which usually carry personal endpoints and credentials
+**/run.sh
+**/run_copy.sh
+**/run_local.sh
+
+# Personal scratch / debug scripts at repo root
+/_*.py
+
+# Benchmark data is downloaded or built locally, never committed
+/data/benchmarks/*.parquet
+/data/benchmarks/*.source.json
+
+# Generated rubric dumps
+/pregenerated_rubrics*.json
+
+# Logs
+*.log
+
+# LLM configs may hold API keys. Tracked configs must reference credentials as
+# ${ENV_VAR}, which is expanded at load time (see rollout/utils.py).
+configs/llm/*.yaml
+!configs/llm/*.example.yaml
+
+analysis_outputs
+.cursor
+.codex

@@ -1,0 +1,17 @@
+{
+    "search_api": {
+        "keys_to_keep": ["title", "url", "description", "position"],
+        "blocked_domains": ["huggingface.co", "openreview.net", "github.com", "instagram.com"],
+        "num": 10,
+        "max_attempts": 3,
+        "request_timeout_seconds": 120.0
+    },
+    "link_summary_tool": {
+        "max_attempts": 3,
+        "request_timeout_seconds": 120.0
+    },
+    "seal_memory_tool": {
+        "max_seal_times": -1,
+        "min_seal_tokens": 20000
+    }
+}

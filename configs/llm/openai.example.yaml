@@ -1,0 +1,25 @@
+# 自行部署的 vLLM / SGLang OpenAI-compatible 服务。
+#
+# 用法：
+#   export OPENAI_API_KEY="sk-..."
+#   python -m recipe.fsm_agent.main --agent_config configs/llm/openai.example.yaml ...
+#
+# ${VAR} 会在加载时展开为环境变量，因此本文件可以安全提交到版本库。
+# endpoint 和 model_name 应与本地推理服务的启动参数一致。
+
+endpoint: ${OPENAI_BASE_URL}    # 留空则用 http://localhost:8000/v1
+api_key: ${OPENAI_API_KEY}
+model_name: gpt-5.5
+
+temperature: 1.0
+top_p: 1.0
+max_tokens: 32768
+
+# 仅部分模型支持，不适用时保持 null。
+top_k: null
+min_p: null
+presence_penalty: null
+repetition_penalty: null
+
+# 让客户端在响应中带回推理内容（若模型支持）。
+include_thoughts: true

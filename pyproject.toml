@@ -1,0 +1,38 @@
+[project]
+name = "traverse"
+version = "0.4.0"
+description = "The inference and evaluation harness for Traverse long-horizon web search agents"
+readme = "README.md"
+requires-python = ">=3.11"
+# Lower bounds are the versions the framework is actually exercised against.
+dependencies = [
+    "httpx>=0.27",
+    "jinja2>=3.1.6",
+    "jsonschema>=4.26.0",
+    "openai>=1.90.0",
+    "pandas>=1.5.3",
+    "pyarrow>=19.0.1,<20.0.0",
+    "pyyaml>=6.0",
+    "tenacity>=9.1.4",
+    "transformers>=4.54.1,<5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.3",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::pytest.PytestUnknownMarkWarning"]
+markers = [
+    "slow: spawns a subprocess and runs a full rollout; deselect with -m 'not slow'",
+]
+
+# Not distributed as a wheel. Recipes, launch scripts, LLM configs and tool
+# assets are all resolved relative to the repository root, so the framework is
+# used from a clone rather than from site-packages. `uv sync` installs the
+# dependencies without building the repository as a package.
+[tool.uv]
+package = false
