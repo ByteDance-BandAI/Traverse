@@ -6,21 +6,15 @@
 
 This repository provides the official inference, rollout, and evaluation harness for **Traverse**, a long-horizon web-search agent that learns to manage both its search process and its active context.
 
+<p align="center">
+  <img src="assets/traverse-overview.png" alt="Overview of the Traverse framework" width="100%">
+</p>
+
 Long-horizon information-seeking agents often accumulate noisy or misleading evidence. Early mistakes can persist across many turns, bias later decisions, and eventually trap the agent in an unproductive search path. Traverse addresses this problem with a structured **Rubric–Answer–Verify** workflow and an agent-controlled memory mechanism. The agent first defines what a correct answer must satisfy, searches under those criteria, and then independently verifies its own answer before deciding whether to stop or continue searching.
 
 This repository contains the runtime used to execute that workflow, connect it to external search tools, collect trajectories, and evaluate results across long-horizon search benchmarks. The Traverse model weights and training stack are separate from this harness. We will also release [Traverse-AutoGen](https://huggingface.co/datasets/ByteDance-BandAI/Traverse-AutoGen), a subset of 8,617 automatically generated information-seeking question-answer pairs used in our training pipeline.
 
 ## Method
-
-```text
-Question ──▶ Rubric ──▶ Answer ──▶ Verify ──▶ Final Answer
-                         ▲           │
-                         └── Revise ─┘
-
-                 Seal Memory / Read Memory
-                  are available during search
-                       and verification.
-```
 
 Traverse organizes the search process into three states:
 
