@@ -4,7 +4,7 @@
 
 [Paper](https://arxiv.org/abs/2609.37082) · [Training Data](https://huggingface.co/datasets/ByteDance-BandAI/Traverse-AutoGen)
 
-This repository provides the official inference, rollout, and evaluation harness for **Traverse**, a long-horizon web-search agent that learns to manage both its search process and its active context.
+This is the official harness for **Traverse**.
 
 <p align="center">
   <img src="assets/traverse-overview.png" alt="Overview of the Traverse framework" width="100%">
