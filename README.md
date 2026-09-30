@@ -2,7 +2,7 @@
 
 ### Official Inference and Evaluation Harness
 
-[Paper](https://arxiv.org/abs/2609.37082) · [Training Data](https://huggingface.co/datasets/ByteDance-BandAI/Traverse-AutoGen)
+[Paper](https://arxiv.org/abs/2609.37082) · [Training Data](https://huggingface.co/datasets/ByteDance/Traverse-AutoGen)
 
 This is the official harness for **Traverse**.
 
@@ -12,7 +12,7 @@ This is the official harness for **Traverse**.
 
 Long-horizon information-seeking agents often accumulate noisy or misleading evidence. Early mistakes can persist across many turns, bias later decisions, and eventually trap the agent in an unproductive search path. Traverse addresses this problem with a structured **Rubric–Answer–Verify** workflow and an agent-controlled memory mechanism. The agent first defines what a correct answer must satisfy, searches under those criteria, and then independently verifies its own answer before deciding whether to stop or continue searching.
 
-This repository contains the runtime used to execute that workflow, connect it to external search tools, collect trajectories, and evaluate results across long-horizon search benchmarks. The Traverse model weights and training stack are separate from this harness. We will also release [Traverse-AutoGen](https://huggingface.co/datasets/ByteDance-BandAI/Traverse-AutoGen), a subset of 8,617 automatically generated information-seeking question-answer pairs used in our training pipeline.
+This repository contains the runtime used to execute that workflow, connect it to external search tools, collect trajectories, and evaluate results across long-horizon search benchmarks. The Traverse model weights and training stack are separate from this harness. We will also release [Traverse-AutoGen](https://huggingface.co/datasets/ByteDance/Traverse-AutoGen), a subset of 8,617 automatically generated information-seeking question-answer pairs used in our training pipeline.
 
 ## Method
 
