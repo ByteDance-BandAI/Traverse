@@ -2,7 +2,7 @@
 
 ### Official Inference and Evaluation Harness
 
-[Paper (coming soon)] · [Training Data (coming soon)](https://huggingface.co/datasets/ByteDance-BandAI/Traverse-AutoGen)
+[Paper](https://arxiv.org/abs/2609.37082) · [Training Data](https://huggingface.co/datasets/ByteDance-BandAI/Traverse-AutoGen)
 
 This repository provides the official inference, rollout, and evaluation harness for **Traverse**, a long-horizon web-search agent that learns to manage both its search process and its active context.
 
@@ -131,7 +131,19 @@ Each run produces a `review.jsonl` file with per-rollout answers and judge decis
 
 ## Citation
 
-Citation metadata and public paper links will be added when the paper record is available.
+If you use Traverse, please cite:
+
+```bibtex
+@misc{ma2026traverselearningrememberreset,
+      title={Traverse: Learning When to Remember, Reset, and Redirect for Long-Horizon Web Search},
+      author={Jingyuan Ma and Lynx Aster and He Zhang and Siyao Song and Weijie Yuan and Zhe Zhang and Kai Jia and Zhifang Sui},
+      year={2026},
+      eprint={2609.37082},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2609.37082},
+}
+```
 
 ## License
 
