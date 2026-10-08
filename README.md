@@ -2,7 +2,14 @@
 
 ### Official Inference and Evaluation Harness
 
-[Paper](https://arxiv.org/abs/2609.37082) · [Training Data](https://huggingface.co/datasets/ByteDance/Traverse-AutoGen)
+<p align="center">
+  <a href="https://arxiv.org/abs/2609.37082">
+    <img src="https://img.shields.io/badge/arXiv-2609.37082-b31b1b.svg" alt="Paper">
+  </a>
+  <a href="https://huggingface.co/datasets/ByteDance/Traverse-AutoGen">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Traverse--AutoGen-FFD21E" alt="Dataset">
+  </a>
+</p>
 
 This is the official harness for **Traverse**.
 
