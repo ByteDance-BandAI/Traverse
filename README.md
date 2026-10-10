@@ -11,7 +11,7 @@
   </a>
 </p>
 
-This is the official harness for **Traverse**.
+This is the official harness for **Traverse**. Check also our HuggingFace🤗!
 
 <p align="center">
   <img src="assets/traverse-overview.png" alt="Overview of the Traverse framework" width="100%">
